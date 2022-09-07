@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "29e233c0-d908-4082-b722-d5eb815d74f5",
+		"name": "FileManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17663074"
+	},
+	"item": [
+		{
+			"name": "File Manager With System",
+			"item": [
+				{
+					"name": "HomePage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/file/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"file",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Single File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/file/upload/single",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"file",
+								"upload",
+								"single"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Multiple Files",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/file/upload/multiple",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"file",
+								"upload",
+								"multiple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Multiple files as Zip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/file/download/zip?fileName=0.html&fileName=1.html&none.html",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"file",
+								"download",
+								"zip"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "0.html"
+								},
+								{
+									"key": "fileName",
+									"value": "1.html"
+								},
+								{
+									"key": "none.html",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File Manager With Database",
+			"item": [
+				{
+					"name": "HomePage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/darshan/Downloads/photo2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/fileDb/upload/single",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"fileDb",
+								"upload",
+								"single"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

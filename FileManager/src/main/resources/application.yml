@@ -1,0 +1,24 @@
+server:
+  port: 8081
+file:
+  storage:
+    location: fileStorage
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      location: temp123
+      file-size-threshold: 5MB
+      max-file-size: 5MB
+      max-request-size: 20 MB
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: true
+#      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/FileManager?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
